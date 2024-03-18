@@ -19,8 +19,8 @@ function App() {
     backgroundColor: "lightgray",
     //position: topLeft || topRight||bottomLeft||bottomRight|| default:center
     // position:"bottomLeft",
-    position:"bottomRight",
-    // position:"topRight",
+    // position:"bottomRight",
+    position:"topRight",
     // position:"topLeft",
 
     // position:"center",

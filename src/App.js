@@ -18,8 +18,8 @@ function App() {
     borderColor:"yellow",
     backgroundColor: "lightgray",
     //position: topLeft || topRight||bottomLeft||bottomRight|| default:center
-    position:"bottomLeft",
-    // position:"bottomRight",
+    // position:"bottomLeft",
+    position:"bottomRight",
     // position:"topRight",
     // position:"topLeft",
 

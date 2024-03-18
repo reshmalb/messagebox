@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+ 
+ import React,{useState} from "react";
+ import MessageBox from "./Components/MessageBox";
+import { Button, Container } from "react-bootstrap";
 
 function App() {
+
+  const [showMessageBox, setShowMessageBox] = useState(false);
+
+
+  const messageBoxProps={
+    title:"Registration ",
+    message:"Registraion completed successfully",
+    width:null ,
+    height:null, 
+    color:null ,
+    border: null,
+    borderColor:"yellow",
+    backgroundColor: "lightgray",
+    //position: topLeft || topRight||bottomLeft||bottomRight|| default:center
+    position:"bottomLeft",
+    // position:"bottomRight",
+    // position:"topRight",
+    // position:"topLeft",
+
+    // position:"center",
+    headerBackgroundColor:"gray",
+    titleColor:"white",
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   
+   <Button 
+      className="bg-dark text-white b-0 mt-5"
+      onClick={() => setShowMessageBox(true)}
+      >Show Message</Button>
+      {showMessageBox && (
+        <MessageBox onClose={() => setShowMessageBox(false)} {...messageBoxProps} />
+      )}
+   
+   </>
+    
   );
 }
 
